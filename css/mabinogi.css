@@ -1,0 +1,174 @@
+* {
+    border-color: var(--border-light);
+    color: var(--color);
+    font-family: 'Nanum Gothic Bold', sans-serif;
+    text-shadow: 0 0 5px var(--text-shadow);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+a {
+    padding: 5px;
+}
+
+a:hover {
+    color: var(--color-hover);
+}
+
+button {
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-dark);
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 2px var(--inset-shadow-light),
+            inset -2px -2px 2px var(--inset-shadow-dark);
+    padding: 5px;
+}
+
+button:hover {
+    color: var(--color-hover);
+    cursor: pointer;
+}
+
+button:active {
+    cursor: pointer;
+}
+
+button:hover:enabled:not(.tab) {
+    background-color: var(--button-hover);
+    box-shadow: inset 2px 2px 2px var(--inset-shadow-light-hover),
+                inset -2px -2px 2px var(--inset-shadow-dark-hover);
+}
+
+button:active:enabled:not(.tab) {
+    background-color: var(--button-hover);
+    box-shadow: inset 2px 2px 2px var(--inset-shadow-dark-hover),
+                inset -2px -2px 2px var(--inset-shadow-light-hover);
+    color: var(--color);
+    text-shadow: 0 0 5px var(--text-shadow-active);
+}
+
+button:disabled {
+    color: var(--text-shadow);
+    text-shadow: none;
+}
+
+.tabContainer {
+    border: 1px none var(--border-dark);
+    border-bottom-style: solid;
+    padding: 0 3px 0 3px;
+}
+
+button.tab {
+    background: linear-gradient(var(--bg-alt), var(--bg-alt), var(--inset-shadow-dark));
+    border-bottom-style: none;
+    border-radius: 3px 3px 0 0;
+    box-shadow: inset 2px 2px 2px var(--inset-shadow-light);
+    margin: 1px 2px 0 2px;
+}
+
+button.tab.selected {
+    background: linear-gradient(var(--bg-alt), var(--bg-color));
+    margin: 0px 2px -1px 2px;
+    padding: 6px 5px 6px 5px;
+    text-shadow: 0 0 5px var(--text-shadow-active);
+}
+
+button.tab.selected:hover {
+    text-shadow: 0 0 5px var(--text-shadow);
+}
+
+select {
+    cursor: pointer;
+}
+
+option {
+    background-color: var(--input-gradient-light);
+}
+
+input[type="text"], input[type="number"] {
+    padding-left: 4px;
+}
+
+select, input {
+    background-image: linear-gradient(var(--input-gradient-dark), var(--input-gradient-light));
+    border: 1px solid var(--border-dark);
+    border-radius: 3px;
+    box-shadow: inset 1px 1px var(--input-shadow);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    margin-left: -2em;
+    line-height: 1.5em;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover + label,
+input[type="radio"]:hover + label {
+    color: var(--color-hover);
+}
+
+input[type="checkbox"] + label > span,
+input[type="radio"] + label > span {
+    display: inline-block;
+    width: 0.875em;
+    height: 0.875em;
+    margin: 0.25em;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-dark);
+    box-shadow: inset 2px 2px 2px var(--inset-shadow-dark),
+                inset -2px -2px 2px var(--inset-shadow-light);
+    vertical-align: bottom;
+}
+
+input[type="checkbox"] + label > span {
+    border-radius: 3px;
+}
+
+input[type="radio"] + label > span {
+    border-radius: 0.5em;
+}
+
+input[type="checkbox"]:checked + label > span {
+    background-image: linear-gradient(45deg, transparent 20%, var(--checked-indicator) 20%, var(--checked-indicator) 35%, transparent 35%),
+                      linear-gradient(315deg, transparent 20%, var(--checked-indicator) 20%, var(--checked-indicator) 35%, transparent 35%);
+    background-position: 50% 40%;
+    background-size: 0.5em 0.5em;
+    background-repeat: no-repeat;
+}
+
+input[type="radio"]:checked + label > span {
+    background-image: radial-gradient(circle, var(--checked-indicator) 50%, transparent 50%);
+    background-position: 50% 50%;
+    background-size: 0.5em 0.5em;
+    background-repeat: no-repeat;
+}
+
+a.external {
+    background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVElEQVR42n3PgQkAIAhEUXdqJ3dqJ3e6IoTPUSQcgj4EQ5IlUiLE0Jil3PECXhcHGBhZ8kg4hwxAu3MZeCGeyFnAXp4hqNQPnt7QL0nADpD6wHccLvnAKksq8iiaAAAAAElFTkSuQmCC") no-repeat scroll calc(100% - 5px) center;
+    padding-right: 18px;
+}
+
+a.external:hover {
+    background-position: calc(100% - 5px) center;
+}
+
+.bordered {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+}

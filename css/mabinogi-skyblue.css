@@ -1,0 +1,25 @@
+:root {
+    --bg-color: #589CBE;
+    --bg-alt: #438EB6;
+    --bg-selected: #96E2F7;
+
+    --color: #FFFFFF;
+    --color-hover: #FFF679;
+    --text-shadow: #284B5D;
+    --text-shadow-active: #CCCCCC;
+
+    --border-dark: #194C8A;
+    --border-light: #4084AE;
+
+    --inset-shadow-dark: #3476A6;
+    --inset-shadow-dark-hover: #56ADC9;
+    --inset-shadow-light: #59B2CD;
+    --inset-shadow-light-hover: #75DEE9;
+
+    --button-hover: #65C4D8;
+
+    --input-gradient-dark: #175389;
+    --input-gradient-light: #2B699C;
+    --input-shadow: #0E397D;
+    --checked-indicator: #133C80;
+}
