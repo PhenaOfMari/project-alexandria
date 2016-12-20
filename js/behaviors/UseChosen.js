@@ -10,9 +10,20 @@ define(function(require){
         events: {
             'change .chosen-select': 'onChange'
         },
-        onRender: function() {
-            var chosenObjects = this.view.$('.chosen-select');
-            chosenObjects.chosen(this.options.chosenOptions);
+        onAttach: function() {
+            var options = this.options;
+            _.forEach(this.view.$('.chosen-select'), function(item) {
+                var chosenOptions = _.clone(options.chosenOptions);
+                var $item = $(item);
+                if(_.isUndefined(chosenOptions.width)) {
+                    var width = $item.width() + 20;
+                    chosenOptions.width = width + 'px';
+                    if(!_.isNull(item.getAttribute('multiple'))) {
+                        chosenOptions.width = width * 4 + 'px';
+                    }
+                }
+                $item.chosen(chosenOptions);
+            });
         },
         onChange: function(event, params) {
             var model = this.view.model;
